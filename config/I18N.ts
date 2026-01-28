@@ -25,18 +25,17 @@ export default class I18NModule extends Module {
         files.map(async (f) => [f.base, await f.import("default")]),
       ),
     );
-    console.log(this.#data);
 
     return next(app);
   }
 
   async write(locale: string, data: any) {
-    await this.#directory.join(locale).write(`
+    await this.#directory.join(`${locale}.ts`).write(`
       import locale from "primate/i18n/locale";
 
-      export default locale({
+      export default locale(
         ${JSON.stringify(data)}
-      });
+      );
     `);
   }
 
