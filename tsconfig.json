@@ -1,0 +1,46 @@
+{
+  "extends": "primate/tsconfig",
+  "compilerOptions": {
+    "baseUrl": "${configDir}",
+    "paths": {
+      "#config/*": [
+        "config/*"
+      ],
+      "#session": [
+        "config/session"
+      ],
+      "#i18n": [
+        "config/i18n"
+      ],
+      "#view/*": [
+        "views/*"
+      ],
+      "#component/*": [
+        "components/*"
+      ],
+      "#store/*": [
+        "stores/*"
+      ],
+      "#locale/*": [
+        "locales/*"
+      ],
+      "#static/*": [
+        "static/*"
+      ]
+    },
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "config",
+    "views",
+    "components",
+    "routes",
+    "stores",
+    "locales",
+    "static",
+    "test"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
