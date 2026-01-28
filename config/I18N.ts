@@ -30,13 +30,9 @@ export default class I18NModule extends Module {
   }
 
   async write(locale: string, data: any) {
-    await this.#directory.join(`${locale}.ts`).write(`
-      import locale from "primate/i18n/locale";
+    await this.#directory.join(`${locale}.ts`).write(`import locale from "primate/i18n/locale";
 
-      export default locale(
-        ${JSON.stringify(data)}
-      );
-    `);
+export default locale(${JSON.stringify(data, null, 2)});`);
   }
 
   route(request: RequestFacade, next: NextRoute) {

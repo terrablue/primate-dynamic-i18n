@@ -1,7 +1,10 @@
+import locale from "primate/i18n/locale";
 
-      import locale from "primate/i18n/locale";
-
-      export default locale(
-        {"switch_language":"Sprache wechseln2","english":"Englisch","german":"Deutsch","all_posts":"Alle Beiträge","counter":"Zähler","title":"Titel"}
-      );
-    
+export default locale({
+  "switch_language": "Sprache wechseln2",
+  "english": "Englisch",
+  "german": "Deutsch",
+  "all_posts": "Alle Beiträge",
+  "counter": "Zähler",
+  "title": "Titel"
+});
